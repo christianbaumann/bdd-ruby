@@ -1,2 +1,2 @@
 # bdd-ruby
-Practicing BDD un Ruby
+Practicing BDD in Ruby
