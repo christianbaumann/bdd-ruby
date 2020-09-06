@@ -19,6 +19,8 @@ class ShoppingCartPage
     @browser.td(class: 'total_cell').text
   end
 
+  private
+
   def row_for(line_item)
     (line_item - 1) * LINES_PER_PUPPY
   end
