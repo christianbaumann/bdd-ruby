@@ -37,3 +37,15 @@ end
 Then(/^I should see "([^"]*)"$/) do |expected|
   expect(@browser.text).to include expected
 end
+
+When(/^I click the first View Details button$/) do
+  pending
+end
+
+And(/^I click the Adopt Another Puppy button$/) do
+  pending
+end
+
+And(/^I click the second View Details button$/) do
+  pending
+end
