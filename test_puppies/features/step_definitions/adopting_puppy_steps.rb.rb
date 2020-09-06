@@ -34,6 +34,6 @@ And(/^I click the Place Order button$/) do
   @browser.button(value: 'Place Order').click
 end
 
-Then(/^I should see "([^"]*)"$/) do |text|
-  fail unless @browser.text.include? text
+Then(/^I should see "([^"]*)"$/) do |expected|
+  expect(@browser.text).to include expected
 end
