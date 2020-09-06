@@ -21,6 +21,7 @@ class ShoppingCartPage
 
   def proceed_to_checkout
     @browser.button(value: 'Complete the Adoption').click
+    @browser
   end
 
   def continue_shopping
