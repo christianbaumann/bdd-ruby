@@ -2,8 +2,8 @@ Given(/^I am on the puppy adoption site$/) do
   @browser.goto "http://puppies.herokuapp.com"
 end
 
-When(/^I click the View Details button$/) do
-  @browser.button(value: 'View Details').click
+When(/^I click the first View Details button$/) do
+  @browser.button(value: 'View Details', index: 0).click
 end
 
 And(/^I click the Adopt Me button$/) do
@@ -38,14 +38,10 @@ Then(/^I should see "([^"]*)"$/) do |expected|
   expect(@browser.text).to include expected
 end
 
-When(/^I click the first View Details button$/) do
-  pending
-end
-
 And(/^I click the Adopt Another Puppy button$/) do
-  pending
+  @browser.button(value: 'Adopt Another Puppy').click
 end
 
 And(/^I click the second View Details button$/) do
-  pending
+  @browser.button(value: 'View Details', index: 1).click
 end
