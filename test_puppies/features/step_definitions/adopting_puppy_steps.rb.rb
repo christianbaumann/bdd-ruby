@@ -46,16 +46,22 @@ And(/^I click the second View Details button$/) do
   @browser.button(value: 'View Details', index: 1).click
 end
 
-Then(/^I should see "([^"]*)" as the name for line item (\d+)$/) do |name, line_item|
-  row = (line_item.to_i - 1) * 6
-  expect(@browser.table(index: 0)[row][1].text).to include name
+Then /^I should see "([^"]*)" as the name for line item (\d+)$/ do |name, line_item|
+  expect(cart_line_item(line_item.to_i)[1].text).to include name
 end
 
-When(/^I should see "([^"]*)" as the subtotal for line item (\d+)$/) do |subtotal, line_item|
-  row = (line_item.to_i - 1) * 6
-  expect(@browser.table(index: 0)[row][3].text).to eql subtotal
+When /^I should see "([^"]*)" as the subtotal for line item (\d+)$/ do |subtotal, line_item|
+  expect(cart_line_item(line_item.to_i)[3].text).to eql subtotal
 end
 
 When(/^I should see "([^"]*)" as the cart total$/) do |total|
   expect(@browser.td(class: 'total_cell').text).to eql total
+end
+
+def row_for(line_item)
+  (line_item - 1) * 6
+end
+
+def cart_line_item(line_item)
+  @browser.table(index: 0)[row_for(line_item)]
 end
