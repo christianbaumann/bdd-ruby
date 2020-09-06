@@ -1,12 +1,11 @@
-Given('I have no cheese') do
-  pending # Write code here that turns the phrase above into concrete actions
+Given /^I have no cheese$/ do
+  log "I am so sad. I have no cheese :("
 end
 
-When('I press the make cheese button') do
-  pending # Write code here that turns the phrase above into concrete actions
+When /^I press the make cheese button$/ do
+  log "There is hope. I hope this machine works"
 end
 
-Then('I should have {int} piece of cheese') do |int|
-  # Then('I should have {float} piece of cheese') do |float|
-  pending # Write code here that turns the phrase above into concrete actions
+Then /^I should have (\d+) piece of cheese$/ do |num_pieces|
+  log "Rejoice! We have #{num_pieces} pieces of cheese."
 end
