@@ -58,3 +58,4 @@ build-iPhoneSimulator/
 # .rubocop-https?--*
 /Gemfile.lock
 /cucumber_and_cheese_book/test_puppies/Gemfile.lock
+/test_puppies/debug.log

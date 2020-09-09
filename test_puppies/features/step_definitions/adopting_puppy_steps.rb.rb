@@ -34,6 +34,11 @@ When /^I select "([^"]*)" from the pay with dropdown$/ do |pay_type|
   on(CheckoutPage).pay_type = pay_type
 end
 
+And(/^I complete the adoption with:$/) do |table|
+  # table is a table.hashes.keys # => [:name, :address, :email, :pay_type]
+  on(CheckoutPage).checkout(table.hashes.first)
+end
+
 When /^I click the Place Order button$/ do
   on(CheckoutPage).place_order
 end

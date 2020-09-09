@@ -56,3 +56,12 @@ Feature: Adopting puppies
     And I should see "Hanna" as the name for line item 2
     And I should see "$22.99" as the subtotal for line item 2
     And I should see "$57.94" as the cart total
+
+  Scenario: Adopting a puppy using a table
+    When I click the View Details button for "Brook"
+    And I click the Adopt Me button
+    And I click the Complete the Adoption button
+    And I complete the adoption with:
+      | name   | address         | email              | pay_type |
+      | Cheezy | 123 Main Street | cheezy@example.com | Check    |
+    Then I should see "Thank you for adopting a puppy!"
