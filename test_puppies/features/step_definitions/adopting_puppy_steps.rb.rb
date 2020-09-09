@@ -58,3 +58,11 @@ end
 When /^I should see "([^"]*)" as the cart total$/ do |total|
   expect(on(ShoppingCartPage).cart_total).to eql total
 end
+
+When /^I complete the adoption using a Credit card$/ do
+  on(CheckoutPage).checkout('pay_type' => 'Credit card')
+end
+
+When /^I complete the adoption$/ do
+  on(CheckoutPage).checkout
+end
