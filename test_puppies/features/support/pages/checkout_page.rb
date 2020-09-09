@@ -2,9 +2,9 @@ class CheckoutPage
   include PageObject
 
   DEFAULT_DATA = {
-      :name => 'cheezy',
-      :address => '123 Main Street',
-      :email => 'cheezy@example.com',
+      :name => Faker::Name.name,
+      :address => Faker::Address.street_address,
+      :email => Faker::Internet.email,
       :pay_type => 'Purchase order'
   }
 
