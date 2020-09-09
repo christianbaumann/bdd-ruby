@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'cucumber'
+gem 'data_magic'
 gem 'faker'
 gem 'rspec'
 gem 'rake'

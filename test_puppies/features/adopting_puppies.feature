@@ -73,6 +73,7 @@ Feature: Adopting puppies
     And I complete the adoption using a Credit card
     Then I should see "Thank you for adopting a puppy!"
 
+  @datamagic_checkout
   Scenario: Adopting a puppy using all default data
     When I click the View Details button for "Brook"
     And I click the Adopt Me button
